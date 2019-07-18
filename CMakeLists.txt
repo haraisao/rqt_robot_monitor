@@ -18,3 +18,6 @@ install(DIRECTORY resource
 install(PROGRAMS scripts/rqt_robot_monitor
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+if(WIN32)
+  install_python_cli(rqt_robot_monitor)
+endif()
